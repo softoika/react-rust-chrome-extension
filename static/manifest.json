@@ -1,0 +1,10 @@
+{
+  "name": "React + TypeScript + Rust Extension",
+  "description": "Extension made with React and TypeScript, Rust and WebAssembly.",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
