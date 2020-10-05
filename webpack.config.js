@@ -1,5 +1,6 @@
 const path = require("path");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const WasmPackPlugin = require("@wasm-tool/wasm-pack-plugin")
 
 module.exports = {
   mode: "development",
@@ -21,6 +22,9 @@ module.exports = {
     ]
   },
   plugins: [
+    new WasmPackPlugin({
+      crateDirectory: path.resolve(__dirname, "wasm-game-of-life")
+    }),
     new CopyWebpackPlugin({
       patterns: [
         { from: "static", to: "." }
