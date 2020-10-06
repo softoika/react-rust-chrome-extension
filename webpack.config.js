@@ -13,11 +13,8 @@ module.exports = {
   module: {
     rules: [
       { 
-        test: /\.(ts|tsx)$/,
-        use: {
-          loader: "babel-loader"
-        },
-        exclude: /node_modules/
+        test: /\.tsx?$/,
+        loader: "ts-loader"
       }
     ]
   },
@@ -30,5 +27,9 @@ module.exports = {
         { from: "static", to: "." }
       ]
     })
-  ]
+  ],
+  devtool: "inline-source-map",
+  resolve: {
+    extensions: [".tsx", ".ts", ".js", ".wasm"]
+  }
 };
