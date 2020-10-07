@@ -5,7 +5,7 @@ const WasmPackPlugin = require("@wasm-tool/wasm-pack-plugin")
 module.exports = {
   mode: "development",
   entry: {
-    popup: "./src/Popup.tsx"
+    popup: "./src/popup/index.js"
   },
   output: {
     path: path.resolve(__dirname, "dist/")
