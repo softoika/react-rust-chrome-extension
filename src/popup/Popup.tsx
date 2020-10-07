@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import * as wasm from "wasm-game-of-life";
+import { Universe } from "wasm-game-of-life";
 
-wasm.greet();
+Universe.new();
 
 const Popup: React.FC = () => {
   return <div>Hello, {"React"}</div>;

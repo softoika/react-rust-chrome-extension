@@ -5,7 +5,7 @@ const WasmPackPlugin = require("@wasm-tool/wasm-pack-plugin")
 module.exports = {
   mode: "development",
   entry: {
-    popup: "./src/popup/index.js"
+    popup: "./src/popup/popup.js"
   },
   output: {
     path: path.resolve(__dirname, "dist/")
@@ -20,7 +20,8 @@ module.exports = {
   },
   plugins: [
     new WasmPackPlugin({
-      crateDirectory: path.resolve(__dirname, "wasm-game-of-life")
+      crateDirectory: path.resolve(__dirname, "wasm-game-of-life"),
+      outName: "wasm-game-of-life"
     }),
     new CopyWebpackPlugin({
       patterns: [
