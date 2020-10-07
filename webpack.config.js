@@ -21,7 +21,8 @@ module.exports = {
   plugins: [
     new WasmPackPlugin({
       crateDirectory: path.resolve(__dirname, "wasm-game-of-life"),
-      outName: "wasm-game-of-life"
+      outDir: path.resolve(__dirname, "wasm-game-of-life/pkg"),
+      outName: "wasm_game_of_life"
     }),
     new CopyWebpackPlugin({
       patterns: [
