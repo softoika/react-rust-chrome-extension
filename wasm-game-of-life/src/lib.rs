@@ -39,8 +39,8 @@ impl Universe {
                     (Cell::Alive, x) if x < 2 => Cell::Dead,
                     (Cell::Alive, 2) | (Cell::Alive, 3) => Cell::Alive,
                     (Cell::Alive, x) if x > 3 => Cell::Dead,
-                    (Cell::Dead, 3) => Cell::Dead,
-                    (otherwize, _) => otherwize,
+                    (Cell::Dead, 3) => Cell::Alive,
+                    (otherwise, _) => otherwise,
                 };
 
                 next[idx] = next_cell;
@@ -86,7 +86,7 @@ impl Universe {
 
 impl Universe {
     fn get_index(&self, row: u32, column: u32) -> usize {
-        (row * self.width + column) as usize
+        (self.width * row + column) as usize
     }
 
     fn live_neighbor_count(&self, row: u32, column: u32) -> u8 {
