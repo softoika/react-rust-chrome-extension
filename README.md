@@ -5,7 +5,7 @@ Sample project which runs [wasm-game-of-life](https://rustwasm.github.io/docs/bo
 1. yarn install
 2. Build wasm and link it
 ```sh
-$ wasm-pack wasm-game-of-life
+$ wasm-pack build wasm-game-of-life
 $ yarn link wasm-game-of-life/pkg
 ```
 3. yarn build
