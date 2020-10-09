@@ -8,8 +8,7 @@
   },
   "dependencies": {
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "wasm-game-of-life": "file:./wasm-game-of-life/pkg"
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.124",
