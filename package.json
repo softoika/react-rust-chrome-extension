@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.0",
