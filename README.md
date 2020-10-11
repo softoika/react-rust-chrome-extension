@@ -6,7 +6,10 @@ Sample project which runs [wasm-game-of-life](https://rustwasm.github.io/docs/bo
 2. Build wasm and link it
 ```sh
 $ wasm-pack build wasm-game-of-life
-$ yarn link wasm-game-of-life/pkg
+$ cd wasm-game-of-life/pkg
+$ yarn link
+$ cd ../..
+$ yarn link wasm-game-of-life
 ```
 3. yarn build
 
